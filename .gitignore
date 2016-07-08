@@ -31,7 +31,8 @@
 ######################
 *.idea
 *.pyc
-coainventory/*.pyc
+admission/*.pyc
+event/*.pyc
 
 # Databases #
 ######################
