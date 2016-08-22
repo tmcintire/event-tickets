@@ -15,9 +15,7 @@
         <th style="width: 15%">Type <a href="{% url 'admission:add_type' event.id  %}"<i class="add-type fa fa-plus"></i></th>
         <th>Price</th>
         <th class="hideable">Add</th>
-        {% if request.user.is_superuser %}
         <th class="hideable">Remove</th>
-        {% endif %}
         <th>Count</th>
         {% if request.user.is_superuser %}
         <th>Total</th>
@@ -56,9 +54,8 @@
             <td class="totals"><strong>Totals</strong></td>
             <td></td>
             <td class="hideable"></td>
-            {% if request.user.is_superuser %}
             <td class="hideable"></td>
-            {% endif %}
+
             <td class="count" id="attendance">{{ event.count }}</td>
             {% if request.user.is_superuser %}
                     <td class="totals" id="total">${{ total_revenue }}</td>
