@@ -52,7 +52,7 @@
     {% endfor %}
     <!-- END ADMISSION TYPE FOR LOOP -->
 
-        <tr>
+        <tr class="table-totals-row">
             <td class="totals"><strong>Totals</strong></td>
             <td></td>
             <td class="hideable"></td>
@@ -93,8 +93,13 @@
                 <td>${{ i.amount }}</td>
             </tr>
         {% endfor %}
-
-        <tr>
+            {% if admin_fee %}
+            <tr>
+                <td colspan="2">Administrative Fee</td>
+                <td class="admin-fee">-${{ admin_fee }}</td>
+            </tr>
+            {% endif %}
+        <tr  class="table-totals-row">
             <td colspan="2">Total Income for Event</td>
 
                 <td id="all-income">${{ all_income }}</td>
@@ -126,13 +131,7 @@
                 <td class="expenses-cost"><span id="expenses-{{ i.id }}">${{ i.cost }}</span></td>
             </tr>
             {% endfor %}
-            {% if admin_fee %}
-            <tr>
-                <td colspan="3">Administrative Fee</td>
-                <td class="admin-fee">${{ admin_fee }}</td>
-            </tr>
-            {% endif %}
-        <tr id ="total-expenses-tr">
+        <tr class="table-totals-row" id ="total-expenses-tr">
             <td colspan="3">Total Expenses</td>
             <td id="expenses-summary">${{ total_expenses }}</td>
 

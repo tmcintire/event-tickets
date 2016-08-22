@@ -29,17 +29,17 @@ def admission_types(request, event_id):
 
     # runs the tickets_total() method from the Event model which gets all the tickets sold for the event
     total_revenue = event.tickets_total()
-
+    admin_fee = event.admin_fee
+    
     if total_revenue is None:
         total_revenue = 0
 
     if total_income is None:
-        all_income = total_revenue
+        all_income = total_revenue - admin_fee
     else:
-        all_income = total_income + total_revenue
+        all_income = (total_income + total_revenue) - admin_fee
 
     cash = event.cash
-    admin_fee = event.admin_fee
     total_expenses = event.total_expenses()
 
     if total_expenses is None:

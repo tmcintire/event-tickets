@@ -28,8 +28,16 @@ table {
     background: #fff;
 }
 
+.table-totals-row {
+    background-color: rgba(100, 176, 88, 0.7);
+}
+
 .tickets-modal {
     margin: 0 auto;
+}
+
+.admin-fee {
+    color: #D9534F;
 }
 
 .confirmation-modal {
