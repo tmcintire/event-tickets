@@ -14,12 +14,14 @@ def home(request):
     return render(request, 'home.html')
 
 
+@login_required()
 def events_view(request):
     event = Event.objects.filter(date__gte=timezone.now()).order_by(('date'))
 
     return render(request, 'event_list.html', locals())
 
 
+@login_required()
 def add_cash(request, event_id):
     event = get_object_or_404(Event, pk=event_id)
     if request.POST:
@@ -40,6 +42,7 @@ def add_cash(request, event_id):
     }, context_instance=RequestContext(request))
 
 
+@login_required()
 def add_event(request):
     if request.POST:
             form = EventForm(request.POST)
@@ -53,6 +56,7 @@ def add_event(request):
     return render(request, 'add.html', locals())
 
 
+@login_required()
 def delete_event(request, event_id):
     Event.objects.get(pk=event_id).delete()
     messages.success(request, 'Event Removed!')

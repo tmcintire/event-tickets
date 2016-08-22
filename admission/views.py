@@ -59,7 +59,7 @@ def admission_types(request, event_id):
 
     return render(request, "admissions.html", locals())
 
-
+@login_required()
 def report(request):
 
     events = Event.objects.all()
