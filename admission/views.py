@@ -100,8 +100,10 @@ def add_tickets(request, event_id):
             all_income = total_income + total_revenue
 
         for i in event.expenses():
-            if i.percent != 0:
+            if i.percent != 0 and i.percent != None:
                 i.cost = total_revenue * i.percent / 100
+                i.save()
+            elif i.percent is None:
                 i.save()
 
         total_expenses = event.total_expenses()
@@ -162,9 +164,11 @@ def delete_one(request, event_id, type_id):
         all_income = total_income + total_revenue
 
     for i in event.expenses():
-        if i.percent != 0:
-            i.cost = total_revenue * i.percent / 100
-            i.save()
+            if i.percent != 0 and i.percent != None:
+                i.cost = total_revenue * i.percent / 100
+                i.save()
+            elif i.percent is None:
+                i.save()
 
     total_expenses = event.total_expenses()
 

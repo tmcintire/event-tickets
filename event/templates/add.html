@@ -40,8 +40,8 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
-
 $(document).ready(function(){
+        $("#add_form input:text, #add_form textarea").first().focus();
         $("#id_percent").keyup(function(){
             if ($(this).val()) {
                 $('#id_cost').hide()
