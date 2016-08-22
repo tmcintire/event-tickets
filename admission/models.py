@@ -10,21 +10,18 @@ class Organization(models.Model):
     def __unicode__(self):
         return self.name
 
-
-class EventType(models.Model):
-    event_type = models.CharField(max_length=100)
-
-    def __unicode__(self):
-        return self.event_type
-
-
 class Event(models.Model):
+    EVENT_TYPE_CHOICES = (
+        ('Huntsville Bal Night', 'Huntsville Bal Night'), 
+        ('Huntsville Blues Night', 'Huntsville Blues Night'), 
+        ('Monthly Dance', 'Monthly Dance'),
+    )
     organization = models.ForeignKey(Organization)
     name = models.CharField(max_length=100)
-    type = models.ForeignKey(EventType)
+    type = models.CharField(max_length=100, choices=EVENT_TYPE_CHOICES)
     date = models.DateField(blank=True, null=True)
     time = models.TimeField(blank=True, null=True)
-    cash = models.DecimalField(decimal_places=2, max_digits=10, blank=True, null=True)
+    cash = models.DecimalField(decimal_places=2, max_digits=10, blank=True, null=True, verbose_name="Cash in Cashbox")
     admin_fee = models.DecimalField(decimal_places=2, max_digits=10, blank=True, null=True, default=0)
 
     def tickets(self):
@@ -116,18 +113,16 @@ class Tickets(models.Model):
     def __unicode__(self):
         return '%s %s' % (self.type, self.event)
 
-
-class ExpenseType(models.Model):
-    event = models.ForeignKey(Event)
-    expense_type = models.CharField(max_length=100, verbose_name="Expense Type (ex. Band)")
-
-    def __unicode__(self):
-        return self.expense_type
-
-
 class Expenses(models.Model):
+    EXPENSE_TYPE_CHOICES = (
+        ('Band', 'Band'), 
+        ('Venue', 'Venue'), 
+        ('DJ', 'DJ'),
+        ('Teacher', 'Teacher'),
+        ('Other', 'Other'),
+    )
     name = models.ForeignKey(Event)
-    type = models.ForeignKey(ExpenseType, verbose_name="Expense Type")
+    type = models.CharField(max_length=100, choices=EXPENSE_TYPE_CHOICES, verbose_name="Expense Type")
     notes = models.CharField(max_length=100)
     cost = models.DecimalField(max_length=10, decimal_places=2, max_digits=10)
     percent = models.IntegerField(blank=True, null=True)
@@ -135,18 +130,13 @@ class Expenses(models.Model):
     def __unicode__(self):
         return '%s %s' % (self.name, self.type)
 
-
-class IncomeType(models.Model):
-    event = models.ForeignKey(Event)
-    income_type = models.CharField(max_length=100)
-
-    def __unicode__(self):
-        return self.income_type
-
-
 class Income(models.Model):
+    INCOME_TYPE_CHOICES = (
+        ('Donation', 'Donation'), 
+        ('Other', 'Other'),
+    )
     event = models.ForeignKey(Event)
-    type = models.ForeignKey(IncomeType, verbose_name="Income Type")
+    type = models.CharField(max_length=100, choices=INCOME_TYPE_CHOICES, verbose_name="Income Type")
     notes = models.CharField(max_length=100)
     amount = models.DecimalField(max_length=10, decimal_places=2, max_digits=10)
 

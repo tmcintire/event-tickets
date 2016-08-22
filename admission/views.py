@@ -5,7 +5,7 @@ from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 from rest_framework import viewsets
 from forms import *
-from models import AdmissionType, Expenses, Tickets, Event, ExpenseType, Income, IncomeType
+from models import *
 import json
 from django.core.serializers.json import DjangoJSONEncoder
 
@@ -237,28 +237,6 @@ def add_expense(request, event_id):
     data = Expenses.objects.filter(name=event_id)
 
     return render(request, 'add.html', locals())
-
-
-@login_required()
-def add_expense_type(request, event_id):
-    event = Event.objects.get(pk=event_id)
-    if request.POST:
-            form = ExpenseTypeForm(request.POST)
-            if form.is_valid():
-                form.save()
-                messages.success(request, 'Expense type added!')
-                url = reverse('admission:add_expense_type', args=(event.id,))
-                return HttpResponseRedirect(url)
-    else:
-        event_name = event.id
-        data_dict = {'event': event_name}
-        form = ExpenseTypeForm(initial=data_dict)
-
-    data = ExpenseType.objects.all()
-    title = "Expense Types"
-
-    return render(request, 'add.html', locals())
-
 
 @login_required()
 def add_income(request, event_id):
