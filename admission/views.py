@@ -46,9 +46,9 @@ def admission_types(request, event_id):
         total_expenses = 0
 
     if total_revenue is None or total_expenses is None:
-        cash_remaining = cash
+        cash_remaining = cash + admin_fee
     else:
-        cash_remaining = ((all_income + cash) - total_expenses)
+        cash_remaining = ((all_income + cash) - total_expenses) + admin_fee
 
     # loops through the expenses list and modifies "cost" to the result of a percentage of total revenue
     if total_revenue is not None:

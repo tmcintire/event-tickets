@@ -87,8 +87,13 @@ class Event(models.Model):
 
 
 class AdmissionType(models.Model):
+    ADMISSION_CHOICES = (
+        ('General', 'GENERAL'), 
+        ('Student', 'STUDENT'), 
+        ('Military', 'MILITARY'),
+    )
     event = models.ForeignKey(Event)
-    type = models.CharField(max_length=100, verbose_name="Admission Type (ex. General)")
+    type = models.CharField(max_length=100, choices=ADMISSION_CHOICES)
     price = models.DecimalField(decimal_places=2, max_digits=10)
 
     def admission_type(self):
