@@ -76,10 +76,6 @@ def add_tickets(request, event_id):
         # # Get post data from the form submit, along with the admission type clicked
         type_id = request.POST.get('type_id')
 
-        # #Create new tickets corresponding with number of tickets chosen
-        # i = 0
-        # while i < int(num_tickets):
-        #     i += 1
         new_ticket = Tickets(type_id=type_id, event_id=event_id)
         new_ticket.save()
 
