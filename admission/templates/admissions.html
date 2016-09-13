@@ -141,8 +141,9 @@
     <table class="table cashbox-table">
         <thead>
             <tr>
-                <th style="width: 50%">Beginning Cash</th>
+                <th>Beginning Cash</th>
                 <th>Ending Cash</th>
+                <th>Net Income</th>
             </tr>
         </thead>
 
@@ -150,6 +151,7 @@
             <tr>
                 <td id="cash">${{ cash }}</td>
                 <td id="cash-remaining">${{ cash_remaining }}</td>
+                <td id="net">${{ net }}</td>
             </tr>
         </tbody>
 
@@ -209,6 +211,9 @@ function create_post() {
             $('#expenses-summary').html("$" + json['total_expenses']);
             $('#all-income').html("$" + json['all_income']);
             $('#total-expenses').html("$" + json['total_revenue']);
+            var net = json['all_income'] - json['total_expenses'];
+            $('#net').html('$' + net + '.00');
+            console.log(net);
             var expenses = json['expenses'];
             var new_expenses = JSON.parse(expenses);
             var count = 0
@@ -263,6 +268,8 @@ $(".delete-btn").click(function() {
                 $('#cash').html("$" + json['cash']);
                 $('#cash-remaining').html("$" + json['cash_remaining']);
                 $('#expenses-summary').html("$" + json['total_expenses']);
+                var net = json['all_income'] - json['total_expenses'];
+                $('#net').html('$' + net + '.00');
                 var expenses = json['expenses'];
                 var new_expenses = JSON.parse(expenses);
                 var count = 0
