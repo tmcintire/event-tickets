@@ -26,5 +26,5 @@ urlpatterns = [
     url(r'^admission/', include('admission.urls')),
     url(r'^accounts/', include('login.urls')),
     url(r'^events/$', events_view, name="events"),
-    url(r'^$', home, name="home"),
+    url(r'^$', events_view, name="home"),
 ]
