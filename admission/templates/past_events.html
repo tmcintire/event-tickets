@@ -18,7 +18,7 @@
             <p>{{ i.date }}</p>
             <p>{{ i.time }}</p>
             {% if request.user.is_superuser %}
-                <p>Starting Cashbox Amount: ${{ i.cash }}</p>
+                <p>Starting Cash: ${{ i.cash }}</p>
                 <p>Revenue: {% if i.tickets_total == None %} $0.00 {% else %} ${{ i.tickets_total }} {% endif %}</p>
                 <p>Expenses:{% if i.total_expenses == None %} $0.00 {% else %} ${{ i.total_expenses }} {% endif %}</p>
             {% endif %}
