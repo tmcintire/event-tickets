@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="event-list">
+<h1 class="text-center">Past Events</h1>
+<div class="row">
+{% for i in event %}
+        <div class="event-data col-md-3" id="event-{{ i.id }}">
+        {% if request.user.is_superuser %}
+            <a class="delete-event" href="#" data-eventid="{{ i.id }}"><div class="delete-x">X</div></a>
+        {% endif %}
+            {% if i.cash == None or i.cash == 0.00 %}
+                <p><a href="{% url 'admission:starting_cash' i.id %}">{{ i.name }}</a></p>
+            {% else %}
+                <p><a href="{% url 'admission:admission' i.id %}">{{ i.name }}</a></p>
+            {% endif%}
+            <p>{{ i.date }}</p>
+            <p>{{ i.time }}</p>
+            {% if request.user.is_superuser %}
+                <p>Starting Cashbox Amount: ${{ i.cash }}</p>
+                <p>Revenue: {% if i.tickets_total == None %} $0.00 {% else %} ${{ i.tickets_total }} {% endif %}</p>
+                <p>Expenses:{% if i.total_expenses == None %} $0.00 {% else %} ${{ i.total_expenses }} {% endif %}</p>
+            {% endif %}
+        </div>
+{% endfor %}
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(".delete-event").click(function() {
+    var eventid = $(this).attr("data-eventid");
+    $.confirm({
+        text: "You are about to REMOVE this event and all it's data. Are you sure?",
+        title: "Confirmation required",
+        confirm: function(button) {
+            $.get('/events/delete/' + eventid ,function(data) {
+                $('#event-' + eventid).remove()
+
+
+            });
+        },
+    });
+});
+
+
+</script>
+
+{% endblock %}

@@ -5,6 +5,7 @@ from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 from django.db.models import Sum, F, Count
 from rest_framework import viewsets
+from django.utils import timezone
 from forms import *
 from models import *
 import json
@@ -75,6 +76,15 @@ def report(request, year):
 
 
     return render(request, "report.html", locals())
+
+
+@login_required()
+def past_events(request):
+
+    event = Event.objects.filter(date__lt=timezone.now()).order_by(('date'))
+    header = "Past Events"
+
+    return render(request, "past_events.html", locals())
 
 
 @login_required()
