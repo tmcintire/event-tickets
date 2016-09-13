@@ -280,12 +280,25 @@ body {
 
 /* Small devices (tablets, 768px and up) */
 @media (max-width: 768px) {
+    #add_form {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 30px;
+    }
     .hideable {
         display: none;
     }
     .admission-table th {
         font-size: 1.6em;
         font-weight: 700;
+    }
+
+    .admission-table td {
+        font-size: 1.3em;
+    }
+
+    .expenses-table td {
+        font-size: 1.3em;
     }
 
     .add,.del {

@@ -28,7 +28,7 @@
         {% if event_id == None %}
         {% elif "/admission/" in request.path %}
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Event Adminisration<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Adminisration<span class="caret"></span></a>
           <ul class="dropdown-menu">
               <li><a href="{% url 'admission:add_type' event_id %}">Add Tickets</a></li>
               <li><a href="{% url 'admission:add_income' event_id %}">Add Income</a></li>
@@ -55,11 +55,11 @@
 
         <ul class="nav navbar-nav navbar-right">
         {% if user.is_authenticated %}
-            <li><a href="/accounts/logout">Logout</a></li>
             <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="/accounts/user/">Account Info</a></li>
+            <li><a href="/accounts/logout">Logout</a></li>
 
           </ul>
         </li>

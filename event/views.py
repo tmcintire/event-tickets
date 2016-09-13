@@ -53,6 +53,8 @@ def add_event(request):
     else:
         form = EventForm()
 
+    title = "New Event"
+
     return render(request, 'add.html', locals())
 
 
