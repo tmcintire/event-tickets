@@ -66,7 +66,7 @@ def admission_types(request, event_id):
 @login_required()
 def report(request, year):
 
-    events = Event.objects.filter(date__year=year)
+    events = Event.objects.filter(date__year=year, date__lt=timezone.now()).order_by(('date'))
     header = "Yearly Event Summary"
 
     i = 0
