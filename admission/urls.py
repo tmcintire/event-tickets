@@ -15,5 +15,5 @@ urlpatterns = [
     url(r'^expenses/edit/(?P<expense_id>[0-9]+)/$', views.edit_expense, name="edit_expense"),
     url(r'^types/edit/(?P<i_id>[0-9]+)/$', views.edit_type, name="edit_type"),
     url(r'^(?P<event_id>[0-9]+)/cash/$', add_cash, name="starting_cash"),
-    url(r'^report/$', views.report, name="report"),
+    url(r'^report/(?P<year>[0-9]{4})/$', views.report, name='year_report'),
 ]

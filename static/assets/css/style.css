@@ -266,6 +266,10 @@ body {
     font-weight: 700;
 }
 
+.report-table {
+    border: 1px solid black;
+}
+
 .add,.del {
     width: 12%;
 }

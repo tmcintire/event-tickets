@@ -63,6 +63,15 @@ class Event(models.Model):
     def total_income(self):
         return self.income().aggregate(Sum(F('amount'))).values()[0]
 
+    def net(self):
+        expenses = self.total_expenses()
+        tickets = self.tickets_total()
+        if self.total_expenses() is None:
+            expenses = 0
+        if self.tickets_total() is None:
+            tickets = 0
+        return tickets - expenses
+
     def cash_remaining(self):
         expenses = self.total_expenses()
         if expenses is None:

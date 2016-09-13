@@ -71,6 +71,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'admission.navbar.navbar',
                 'admission.organization.organization',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',

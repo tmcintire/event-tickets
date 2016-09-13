@@ -3,16 +3,31 @@
 
 {% block content %}
 
-
-<h3>{{ header }}</h3>
+<h3 class="text-center">{{ header }}</h3>
 
 <div id="reports">
-    {% for i in events %}
-        <p>Name: {{ i.name }}</p>
-        <p>Income:{% if i.tickets_total == None %} $0.00 {% else %} ${{ i.tickets_total }} {% endif %}</p>
-        <p>Expense:{% if i.total_expenses == None %} $0.00 {% else %} ${{  i.total_expenses }} {% endif %}</p>
-        <p>Net: ${{ i.cash_remaining }}</p>
-        <br />
-    {% endfor %}
+	<table class="table report-table">
+		<thead>
+			<th>Event</th>
+			<th>Income</th>
+			<th>Expense</th>
+			<th>Net</th>
+		</thead>
+		<tbody>
+		    {% for i in events %}
+		    	<tr>
+			        <td>{{ i.name }}</td>
+			        <td>{% if i.tickets_total == None %} $0.00 {% else %} ${{ i.tickets_total }} {% endif %}</td>
+			        <td>{% if i.total_expenses == None %} $0.00 {% else %} ${{  i.total_expenses }} {% endif %}</td>
+			        <td>${{ i.net }}</td>
+			        <br />
+			    </tr>
+		    {% endfor %}
+		    	<tr class="table-totals-row">
+		    		<td colspan="3">Year to Date Income:</td>
+		    		<td>${{netSum}}</td>
+		    	</tr>
+		</tbody>
 </div>
+
 {% endblock %}

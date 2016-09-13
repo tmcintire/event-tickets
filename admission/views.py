@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, get_object_or_404, render_to_response, RequestContext, HttpResponse
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
+from django.db.models import Sum, F, Count
 from rest_framework import viewsets
 from forms import *
 from models import *
@@ -41,7 +42,7 @@ def admission_types(request, event_id):
 
     cash = event.cash
     total_expenses = event.total_expenses()
-    net = total_income
+    net = 0
 
     if total_expenses is None:
         total_expenses = 0
@@ -62,10 +63,16 @@ def admission_types(request, event_id):
     return render(request, "admissions.html", locals())
 
 @login_required()
-def report(request):
+def report(request, year):
 
-    events = Event.objects.all()
-    header = "Reports"
+    events = Event.objects.filter(date__year=year)
+    header = "Yearly Event Summary"
+
+    i = 0
+    netSum = 0
+    for i in events:
+        netSum = netSum + i.net()
+
 
     return render(request, "report.html", locals())
 

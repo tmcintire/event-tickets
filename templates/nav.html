@@ -35,8 +35,17 @@
               <li><a href="{% url 'admission:add_expense' event_id %}">Add Expense</a></li>
           </ul>
         </li>
-        <li><a href="{%  url 'admission:report' %}">Reports</a></li>
         {% endif %}
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reports<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+              {% for year in years %}
+                <li><a href="{%  url 'admission:year_report' year.year %}">{{ year.year }}</a></li>
+              {% endfor %}
+
+          </ul>
+        </li>
             {% if request.user.is_superuser %}
               <li><a href="/admin">Admin</a></li>        
             {% endif %}
