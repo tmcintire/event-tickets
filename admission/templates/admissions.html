@@ -7,7 +7,7 @@
 
 <h1 class="admission-headers text-center">{{ event }}</h1>
 
-    <button class="hideBtn btn btn-primary">Hide Add/Remove Buttons</button>
+    <button class="hideBtn btn btn-primary">Show Add/Remove Buttons</button>
 
 <div class="admission-wrapper">
 <table class="table admission-table">
@@ -115,7 +115,7 @@
         <thead>
             <th>Name <a href="{% url 'admission:add_expense' event.id  %}"<i class="add-type fa fa-plus"></i></th>
             <th>Notes</th>
-            <th>Percent</th>
+            <th>%</th>
             <th>Cost</th>
         </thead>
         <tbody id="expense-count">
@@ -170,10 +170,10 @@ $(document).ready(function() {
 
 $(".hideBtn").click(function() {
     $('.hideable').toggle();
-    if ($(this).html() == "Hide Add/Remove Buttons") {
-        $(this).html('Show Add/Remove Buttons')
-    } else if ($(this).html() == "Show Add/Remove Buttons") {
+    if ($(this).html() == "Show Add/Remove Buttons") {
         $(this).html('Hide Add/Remove Buttons')
+    } else if ($(this).html() == "Hide Add/Remove Buttons") {
+        $(this).html('Show Add/Remove Buttons')
     }
 });
 $(".add-btn").click(function() {

@@ -280,6 +280,9 @@ body {
 
 /* Small devices (tablets, 768px and up) */
 @media (max-width: 768px) {
+    .hideable {
+        display: none;
+    }
     .admission-table th {
         font-size: 1.6em;
         font-weight: 700;
