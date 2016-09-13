@@ -198,6 +198,7 @@ body {
     margin: 10px;
     border: 1px solid black;
     box-shadow: 1px 1px 5px 1px #777;
+    min-height: 280px;
 }
 
 .navbar-default {
@@ -297,7 +298,7 @@ body {
     .admission-table td, .expenses-table td, .cashbox-table td {
         font-size: 1.2em;
     }
-    
+
     .add,.del {
         width: 12%;
     }
