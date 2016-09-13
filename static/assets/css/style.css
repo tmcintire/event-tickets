@@ -288,19 +288,16 @@ body {
     .hideable {
         display: none;
     }
-    .admission-table th {
-        font-size: 1.6em;
+    .admission-table th, .expenses-table th, .cashbox-table th {
+        font-size: 1.4em;
         font-weight: 700;
+        white-space: nowrap;
     }
 
-    .admission-table td {
-        font-size: 1.3em;
+    .admission-table td, .expenses-table td, .cashbox-table td {
+        font-size: 1.2em;
     }
-
-    .expenses-table td {
-        font-size: 1.3em;
-    }
-
+    
     .add,.del {
         width: 12%;
     }
