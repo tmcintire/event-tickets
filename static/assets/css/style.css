@@ -201,6 +201,17 @@ body {
     min-height: 280px;
 }
 
+.past-event-data {
+    background: #fff;
+    padding: 20px;
+    font-size: 1.3em;
+    border-radius: 5px;
+    margin: 10px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 5px 1px #777;
+    min-height: 320px;
+}
+
 .navbar-default {
     height: 50px;
     border: 0;

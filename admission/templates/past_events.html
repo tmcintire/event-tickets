@@ -6,7 +6,7 @@
 <h1 class="text-center">Past Events</h1>
 <div class="row">
 {% for i in event %}
-        <div class="event-data col-md-3" id="event-{{ i.id }}">
+        <div class="past-event-data col-md-3" id="event-{{ i.id }}">
         {% if request.user.is_superuser %}
             <a class="delete-event" href="#" data-eventid="{{ i.id }}"><div class="delete-x">X</div></a>
         {% endif %}
@@ -21,6 +21,7 @@
                 <p>Starting Cash: ${{ i.cash }}</p>
                 <p>Revenue: {% if i.tickets_total == None %} $0.00 {% else %} ${{ i.tickets_total }} {% endif %}</p>
                 <p>Expenses:{% if i.total_expenses == None %} $0.00 {% else %} ${{ i.total_expenses }} {% endif %}</p>
+                <p>{% if i.net == 0 %} Net: $0.00 {% else %} Net: ${{ i.net}} {% endif %} </p>
             {% endif %}
         </div>
 {% endfor %}
