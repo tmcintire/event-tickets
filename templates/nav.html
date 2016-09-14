@@ -23,7 +23,7 @@
       <ul class="nav navbar-nav">
           {% if user.is_authenticated %}
         <li><a href="{%  url 'events' %}">Events <span class="sr-only">(current)</span></a></li>
-        {% if request.user.is_superuser %}
+        {% if request.user.is_staff%}
         <li><a href="{% url 'events:add_event' %}">New Event</a></li>
         {% if event_id == None %}
         {% elif "/admission/" in request.path %}

@@ -2,29 +2,67 @@
 
 
 {% block content %}
-<div class="event-list">
-<h1 class="text-center">Upcoming Events</h1>
-<div class="row">
-{% for i in event %}
-        <div class="event-data col-md-3" id="event-{{ i.id }}">
-        {% if request.user.is_superuser %}
-            <a class="delete-event" href="#" data-eventid="{{ i.id }}"><div class="delete-x">X</div></a>
-        {% endif %}
-            {% if i.cash == None or i.cash == 0.00 %}
-                <p><a href="{% url 'admission:starting_cash' i.id %}">{{ i.name }}</a></p>
-            {% else %}
-                <p><a href="{% url 'admission:admission' i.id %}">{{ i.name }}</a></p>
-            {% endif%}
-            <p>{{ i.date }}</p>
-            <p>{{ i.time }}</p>
+{% if todays_event.all %}
+    <h1 class="text-center">Todays Event</h1>
+    <div class="event-list">
+    {% for i in todays_event %}
+        <div class="event-list-wrapper">
+            <div class="event-data" id="event-{{ i.id }}">
             {% if request.user.is_superuser %}
-                <p>Starting Cash: ${{ i.cash }}</p>
-                <p>Revenue: {% if i.tickets_total == None %} $0.00 {% else %} ${{ i.tickets_total }} {% endif %}</p>
-                <p>Expenses:{% if i.total_expenses == None %} $0.00 {% else %} ${{ i.total_expenses }} {% endif %}</p>
+                <a class="delete-event" href="#" data-eventid="{{ i.id }}"><span class="delete-x">X</span></a>
             {% endif %}
+            <div class="row">
+                <div class="col-md-6">
+                    {% if i.cash == None or i.cash == 0.00 %}
+                        <p><a href="{% url 'admission:starting_cash' i.id %}">{{ i.name }}</a></p>
+                    {% else %}
+                        <p><a href="{% url 'admission:admission' i.id %}">{{ i.name }}</a></p>
+                    {% endif%}
+                    <p>{{ i.date }}</p>
+                    <p>{{ i.time }}</p>
+                </div>
+                <div class="col-md-6">
+                    {% if request.user.is_staff %}
+
+                        <p>Starting Cash: {% if i.cash == None %} <a href="{% url 'admission:starting_cash' i.id %}">Enter Amount</a> {% else %} ${{ i.cash }} {% endif %}</p>
+                        <p>Revenue: {% if i.tickets_total == None %} $0.00 {% else %} ${{ i.tickets_total }} {% endif %}</p>
+                        <p>Expenses:{% if i.total_expenses == None %} $0.00 {% else %} ${{ i.total_expenses }} {% endif %}</p>
+                    {% endif %}
+                </div>
+            </div>
         </div>
+    {% endfor %}
+    </div>
+{% endif %}
+<h1 class="text-center">Upcoming Events</h1>
+<div class="event-list">
+{% for i in event %}
+    <div class="event-list-wrapper">
+        <div class="event-data" id="event-{{ i.id }}">
+        {% if request.user.is_superuser %}
+            <a class="delete-event" href="#" data-eventid="{{ i.id }}"><span class="delete-x">X</span></a>
+        {% endif %}
+        <div class="row">
+            <div class="col-md-6">
+                {% if i.cash == None or i.cash == 0.00 %}
+                    <p><a href="{% url 'admission:starting_cash' i.id %}">{{ i.name }}</a></p>
+                {% else %}
+                    <p><a href="{% url 'admission:admission' i.id %}">{{ i.name }}</a></p>
+                {% endif%}
+                <p>{{ i.date }}</p>
+                <p>{{ i.time }}</p>
+            </div>
+            <div class="col-md-6">
+                {% if request.user.is_staff %}
+
+                    <p>Starting Cash: {% if i.cash == None %} <a href="{% url 'admission:starting_cash' i.id %}">Enter Amount</a> {% else %} ${{ i.cash }} {% endif %}</p>
+                    <p>Revenue: {% if i.tickets_total == None %} $0.00 {% else %} ${{ i.tickets_total }} {% endif %}</p>
+                    <p>Expenses:{% if i.total_expenses == None %} $0.00 {% else %} ${{ i.total_expenses }} {% endif %}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
 {% endfor %}
-</div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

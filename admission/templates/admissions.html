@@ -5,7 +5,13 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="{% static 'assets/js/jquery.confirm.min.js' %}"></script>
 
-<h1 class="admission-headers text-center">{{ event }}</h1>
+<h1 class="admission-headers text-center">{{ event }}
+    {% if request.user.is_staff %}
+    <span class="edit-event">
+        <a href="{% url 'events:edit_event' event.id %}">Edit Event</a>
+    </span>
+    {% endif %}
+</h1>
 
     <button class="hideBtn btn btn-primary">Show Add/Remove Buttons</button>
 
@@ -17,7 +23,7 @@
         <th class="hideable">Add</th>
         <th class="hideable">Remove</th>
         <th style="width: 15%">Count</th>
-        {% if request.user.is_superuser %}
+        {% if request.user.is_staff %}
         <th style="width: 20%">Total</th>
         {% endif %}
     </thead>
@@ -37,7 +43,7 @@
             <i class="fa fa-minus-square fa-3x"></i></button>
         </td>
         <td id="count-{{ i.id }}">{{ i.admission_type_count }}</td>
-        {% if request.user.is_superuser %}
+        {% if request.user.is_staff %}
             <td id="total-{{ i.id }}">
                 {% if i.admission_type_total_price == None %}
                     $0.00
@@ -57,7 +63,7 @@
             <td class="hideable"></td>
 
             <td class="count" id="attendance">{{ event.count }}</td>
-            {% if request.user.is_superuser %}
+            {% if request.user.is_staff %}
                     <td class="totals" id="total">${{ total_revenue }}</td>
             {% endif %}
 
@@ -69,7 +75,7 @@
 
 
     <!-- only admins can see this section -->
-{% if request.user.is_superuser %}
+{% if request.user.is_staff %}
     <h1 class="admission-headers text-center">Income</h1>
     <table class="table expenses-table">
         <thead>
@@ -109,7 +115,7 @@
 
 
 <!-- only admins can see this section -->
-{% if request.user.is_superuser %}
+{% if request.user.is_staff %}
     <h1 class="admission-headers text-center">Expenses</h1>
     <table class="table expenses-table">
         <thead>

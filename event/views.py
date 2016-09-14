@@ -5,7 +5,7 @@ from django.utils import timezone
 from django.views.generic import DetailView, ListView
 from django.contrib.auth.decorators import login_required
 from admission.models import Event
-from forms import EventForm, CashForm
+from forms import *
 # Create your views here.
 
 
@@ -17,6 +17,7 @@ def home(request):
 @login_required()
 def events_view(request):
     event = Event.objects.filter(date__gte=timezone.now()).order_by(('date'))
+    todays_event = Event.objects.filter(date=timezone.now())
 
     return render(request, 'event_list.html', locals())
 
@@ -63,3 +64,24 @@ def delete_event(request, event_id):
     Event.objects.get(pk=event_id).delete()
     messages.success(request, 'Event Removed!')
     return HttpResponseRedirect('/events/')
+
+
+@login_required()
+def edit_event(request, event_id):
+    event = get_object_or_404(Event, pk=event_id)
+    t = "Edit"
+
+    if request.POST:
+        form = EditEventForm(request.POST, instance=event)
+        if form.is_valid():
+            form.save()
+
+            return HttpResponseRedirect('/events/')
+
+    else:
+        form = EditEventForm(instance=event)
+
+    return render_to_response("edit.html", {
+        'form': form,
+        'event': event,
+    }, context_instance=RequestContext(request))

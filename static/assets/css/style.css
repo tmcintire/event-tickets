@@ -46,8 +46,8 @@ table {
 
 .delete-x {
     position: absolute;
-    right: -15px;
     top: -15px;
+    right: 0;
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -104,6 +104,11 @@ body {
 
 .event-list {
     margin-top: 50px;
+    position: relative;
+}
+
+.event-list-wrapper {
+    position: relative;
 }
 
 .styled-select select {
@@ -191,14 +196,13 @@ body {
 }
 
 .event-data {
-    background: #fff;
+    background: rgba(183, 181, 182, 0.1);
     padding: 20px;
     font-size: 1.3em;
     border-radius: 5px;
-    margin: 10px;
+    margin: 18px;
     border: 1px solid black;
     box-shadow: 1px 1px 5px 1px #777;
-    min-height: 280px;
 }
 
 .past-event-data {
@@ -272,6 +276,7 @@ body {
 
 .admission-headers {
     color: #777;
+    margin-bottom: 20px;
 }
 
 .admission-table th {
@@ -288,6 +293,11 @@ body {
 
 .hideBtn {
     display: none;
+}
+
+.edit-event {
+    font-size: 0.5em;
+    margin-left: 10px;
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -318,7 +328,6 @@ body {
         display: block;
     }
     .event-data {
-        margin: 40px;
         border: 1px solid black;
         box-shadow: 1px 1px 5px 1px #777;
     }
