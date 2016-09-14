@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Sum, F, Count
 from rest_framework import viewsets
 from django.utils import timezone
+from datetime import datetime
 from forms import *
 from models import *
 import json
@@ -19,6 +20,9 @@ def admission_types(request, event_id):
 
     # get all the event objects for this specific event
     event = Event.objects.get(pk=event_id)
+    event_is_passed = False
+    if event.date < datetime.today().date():
+        event_is_passed = True
 
     # Get all types for the event in question using the admission_types() method
     types = event.admission_types().order_by('-price')
