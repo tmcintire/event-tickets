@@ -153,7 +153,15 @@
 
             {% for i in event.expenses %}
             <tr class="exp_list">
-                <td><a href="{% url 'admission:edit_expense' i.id %}">{{ i.type }}</a></td>
+                <td>
+                    {% if event_is_passed == False %}
+                        <a href="{% url 'admission:edit_expense' i.id %}">
+                            {{ i.type }}
+                        </a>
+                    {% else %}
+                        {{ i.type }}
+                    {% endif %}
+                </td>
                 <td>{{ i.notes }}</td>
                 <td>{% if i.percent > 0 %} {{ i.percent }}% {% else %} - {% endif %}</td>
                 <td class="expenses-cost"><span id="expenses-{{ i.id }}">${{ i.cost }}</span></td>
