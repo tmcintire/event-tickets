@@ -45,8 +45,6 @@ def add_cash(request, event_id):
 
 @login_required()
 def add_event(request):
-    organization = get_organization(request)
-    data = {'organization': organization.id}
     if request.POST:
             form = EventForm(request.POST)
             if form.is_valid():
