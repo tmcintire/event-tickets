@@ -188,7 +188,7 @@ def delete_one(request, event_id, type_id):
         all_income = total_income + total_revenue
 
     for i in event.expenses():
-            if i.percent != 0 and i.percent != None:
+            if i.percent != 0 and i.percent != None and all_income > 0:
                 i.cost = (total_revenue - admin_expenses - admin_fee) * i.percent/100
                 i.save()
             elif i.percent is None:
