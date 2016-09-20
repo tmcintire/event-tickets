@@ -66,7 +66,13 @@ class Event(models.Model):
         return self.expenses().filter(category="Main").aggregate(Sum(F('cost'))).values()[0]
 
     def total_expenses(self):
-        return self.admin_expenses() + self.main_expenses()
+        admin_expenses = self.admin_expenses()
+        main_expenses = self.main-expenses()
+        if admin_expenses == None:
+            admin_expenses = 0
+        if main_expenses == None:
+            main_expenses = 0
+        return admin_expenses + main_expenses
 
     def income(self):
         return self.income_set.all()
