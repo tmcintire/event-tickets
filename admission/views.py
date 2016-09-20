@@ -108,6 +108,7 @@ def add_tickets(request, event_id):
         total_revenue = event.tickets_total()
         admin_fee = event.admin_fee
         admin_expenses = event.admin_expenses()
+        total_expenses = event.total_expenses()
 
         if total_income is None:
             all_income = total_revenue
@@ -115,13 +116,12 @@ def add_tickets(request, event_id):
             all_income = total_income + total_revenue
 
         for i in event.expenses():
-            if i.percent != 0 and i.percent != None:
-                i.cost = (total_revenue - admin_expenses - admin_fee) * i.percent / 100
-                i.save()
-            elif i.percent is None:
-                i.save()
-
-        total_expenses = event.total_expenses()
+            if all_income - total_expenses > 0:
+                if i.percent != 0 and i.percent != None:
+                    i.cost = (total_revenue - admin_expenses - admin_fee) * i.percent / 100
+                    i.save()
+                elif i.percent is None:
+                    i.save()
 
         if total_revenue is None or total_expenses is None:
             cash_remaining = cash
@@ -174,6 +174,7 @@ def delete_one(request, event_id, type_id):
     total_income = event.total_income()
     total_revenue = event.tickets_total()
     admin_expenses = event.admin_expenses()
+    total_expenses = event.total_expenses()
 
     if total_income is None:
         total_income = 0
@@ -188,13 +189,12 @@ def delete_one(request, event_id, type_id):
         all_income = total_income + total_revenue
 
     for i in event.expenses():
-            if i.percent != 0 and i.percent != None and all_income > 0:
+        if all_income - total_expenses > 0:
+            if i.percent != 0 and i.percent != None:
                 i.cost = (total_revenue - admin_expenses - admin_fee) * i.percent/100
                 i.save()
             elif i.percent is None:
                 i.save()
-
-    total_expenses = event.total_expenses()
 
     if total_revenue is None or total_expenses is None:
         cash_remaining = cash
