@@ -83,12 +83,14 @@ class Event(models.Model):
     def net(self):
         admin_expenses = self.admin_expenses()
         main_expenses = self.main_expenses()
-        expenses = admin_expenses + main_expenses
         tickets = self.tickets_total()
-        if self.total_expenses() is None:
-            expenses = 0
-        if self.tickets_total() is None:
+        if admin_expenses is None:
+            admin_expenses = 0
+        if main_expenses is None:
+            main_expenses = 0
+        if tickets is None:
             tickets = 0
+        expenses = admin_expenses + main_expenses
         return tickets - expenses
 
     def cash_remaining(self):
