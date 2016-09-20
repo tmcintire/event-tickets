@@ -92,7 +92,7 @@
     <h1 class="admission-headers text-center">Income</h1>
     <table class="table expenses-table">
         <thead>
-            <th>Type 
+            <th>Type
                 {% if event_is_passed == False %}
                     <a href="{% url 'admission:add_income' event.id  %}">
                         <i class="add-type fa fa-plus"></i>
@@ -138,7 +138,7 @@
     <h1 class="admission-headers text-center">Expenses</h1>
     <table class="table expenses-table">
         <thead>
-            <th>Name 
+            <th>Name
                 {% if event_is_passed == False %}
                     <a href="{% url 'admission:add_expense' event.id  %}">
                         <i class="add-type fa fa-plus"></i>
@@ -147,6 +147,7 @@
             </th>
             <th>Notes</th>
             <th>%</th>
+            <th style="width: 7%">Paid</th>
             <th>Cost</th>
         </thead>
         <tbody id="expense-count">
@@ -164,11 +165,28 @@
                 </td>
                 <td>{{ i.notes }}</td>
                 <td>{% if i.percent > 0 %} {{ i.percent }}% {% else %} - {% endif %}</td>
-                <td class="expenses-cost"><span id="expenses-{{ i.id }}">${{ i.cost }}</span></td>
+                <td class="checkbox-field">
+                  <input type="checkbox"
+                         class="expense-checkbox"
+                         id="paid-checkbox-{{i.id}}"
+                         {% if i.paid == True %}
+                            checked
+                         {% endif %}
+                         />
+                </td>
+                <td class="expenses-cost">
+                  <span id="expenses-{{ i.id }}">
+                    {% if i.cost < 1 %}
+                      $0.00
+                    {% else %}
+                      ${{ i.cost }}
+                    {% endif %}
+                  </span>
+                </td>
             </tr>
             {% endfor %}
         <tr class="table-totals-row" id ="total-expenses-tr">
-            <td colspan="3">Total Expenses</td>
+            <td colspan="4">Total Expenses</td>
             <td id="expenses-summary">${{ total_expenses }}</td>
 
         </tr>
@@ -224,11 +242,31 @@ $(".add-btn").click(function() {
 $('#ticket-form').on('submit', function(event) {
     event.preventDefault();
     console.log("form submitted!") // sanity check
-    
+
 });
 
+$('.expense-checkbox').change(function() {
+  event_id = "{{ event.id }}"
+  expense_id = $(this).attr('id').split('-')[2];
+  checked = this.checked;
+  console.log(checked);
+    mark_as_paid()
+});
+
+
+function mark_as_paid() {
+  $.ajax({
+    url: "/admission/" + event_id + "/check_as_paid/" + expense_id + "/",
+    type: "POST",
+    data: {
+      checked: checked,
+      expense_id: expense_id,
+      event_id: event_id,
+    }
+  })
+}
+
 function create_post() {
-    console.log("create post is working!") // sanity check
     $.ajax({
         url: "/admission/" + eventid + "/addtickets/", // the endpoint
         type: "POST", // http method
@@ -302,7 +340,7 @@ $(".delete-btn").click(function() {
                 } else {
                     $('#total').html("$" + json['tickets_total']);
                 }
-            
+
                 $('#attendance').html(json['tickets_sold']);
                 $('#cash').html("$" + json['cash']);
                 $('#cash-remaining').html("$" + json['cash_remaining']);

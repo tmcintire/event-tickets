@@ -62,7 +62,7 @@ def admission_types(request, event_id):
     # loops through the expenses list and modifies "cost" to the result of a percentage of total revenue
     if total_revenue is not None:
         for i in expenses:
-            if i.percent > 0:
+            if i.percent > 0 and all_income > 0:
                 i.cost = (total_revenue - admin_expenses - admin_fee) * i.percent/100
                 i.save()
 
@@ -223,6 +223,26 @@ def delete_one(request, event_id, type_id):
 
     return JsonResponse(data)
 
+
+@login_required()
+def mark_as_paid(request, event_id, expense_id):
+    event = Event.objects.get(pk=event_id)
+    expense = Expenses.objects.get(pk=expense_id)
+    checked = request.POST.get('checked')
+    print checked
+    if checked == "true":
+        checked = True
+    else:
+        checked = False
+
+    expense.paid = checked
+    expense.save()
+
+    data = {
+        "event_id": event_id,
+    }
+
+    return JsonResponse(data)
 
 @login_required()
 def add_type(request, event_id):

@@ -17,4 +17,5 @@ urlpatterns = [
     url(r'^(?P<event_id>[0-9]+)/cash/$', add_cash, name="starting_cash"),
     url(r'^report/(?P<year>[0-9]{4})/$', views.report, name='year_report'),
     url(r'^report/past_events/$', views.past_events, name='past_events'),
+    url(r'^(?P<event_id>[0-9]+)/check_as_paid/(?P<expense_id>[0-9]+)/$', views.mark_as_paid, name="mark_as_paid"),
 ]

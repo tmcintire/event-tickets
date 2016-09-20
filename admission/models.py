@@ -161,6 +161,7 @@ class Expenses(models.Model):
     notes = models.CharField(max_length=100)
     cost = models.DecimalField(max_length=10, decimal_places=2, max_digits=10)
     percent = models.IntegerField(blank=True, null=True)
+    paid = models.BooleanField()
 
     def __unicode__(self):
         return '%s %s' % (self.name, self.type)
