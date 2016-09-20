@@ -116,8 +116,13 @@ def add_tickets(request, event_id):
 
         for i in event.expenses():
             if i.percent != 0 and i.percent != None:
-                i.cost = (total_revenue - admin_expenses - admin_fee) * i.percent / 100
-                i.save()
+                cost = (total_revenue - admin_expenses - admin_fee) * i.percent/100
+                if cost > 0:
+                    i.cost = cost
+                    i.save()
+                else:
+                    i.cost = 0
+                    i.save()
             elif i.percent is None:
                 i.save()
 
