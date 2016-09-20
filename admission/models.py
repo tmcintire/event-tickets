@@ -67,7 +67,7 @@ class Event(models.Model):
 
     def total_expenses(self):
         admin_expenses = self.admin_expenses()
-        main_expenses = self.main-expenses()
+        main_expenses = self.main_expenses()
         if admin_expenses == None:
             admin_expenses = 0
         if main_expenses == None:
