@@ -165,15 +165,25 @@
                 </td>
                 <td>{{ i.notes }}</td>
                 <td>{% if i.percent > 0 %} {{ i.percent }}% {% else %} - {% endif %}</td>
-                <td class="checkbox-field">
-                  <input type="checkbox"
-                         class="expense-checkbox"
-                         id="paid-checkbox-{{i.id}}"
-                         {% if i.paid == True %}
-                            checked
-                         {% endif %}
-                         />
-                </td>
+                {% if event_is_passed == False %}
+                  <td class="checkbox-field">
+                    <input type="checkbox"
+                           class="expense-checkbox"
+                           id="paid-checkbox-{{i.id}}"
+                           {% if i.paid == True %}
+                              checked
+                           {% endif %}
+                           />
+                  </td>
+                  {% else %}
+                    <td>
+                      {% if i.paid == True %}
+                        Yes
+                      {% else %}
+                        No
+                      {% endif %}
+                    </td>
+                  {% endif %}
                 <td class="expenses-cost">
                   <span id="expenses-{{ i.id }}">
                     {% if i.cost < 1 %}
