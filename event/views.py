@@ -5,7 +5,7 @@ from django.utils import timezone
 from django.views.generic import DetailView, ListView
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from admission.models import Event, Employee
+from admission.models import Event
 from forms import *
 # Create your views here.
 
@@ -14,19 +14,9 @@ def home(request):
 
     return render(request, 'home.html')
 
-def get_organization(request):
-    current_user = request.user
-    user_id = current_user.id
-    organization = Employee.objects.get(user=user_id).organization
-
-    return organization
-
-
 @login_required()
 def events_view(request):
-    
-    organization = get_organization(request)
-    event = Event.objects.filter(organization__name=organization, date__gte=timezone.now()).order_by(('date'))
+    event = Event.objects.filter(date__gte=timezone.now()).order_by(('date'))
     todays_event = Event.objects.filter(date=timezone.now())
 
     return render(request, 'event_list.html', locals())

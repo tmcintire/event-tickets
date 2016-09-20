@@ -20,14 +20,6 @@ class Organization(models.Model):
         return self.name
 
 
-class Employee(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    organization = models.ForeignKey(Organization)
-
-    def __unicode__(self):
-        return '%s %s' % (self.user, self.organization)
-
-
 class Event(models.Model):
     organization = models.ForeignKey(Organization)
     name = models.CharField(max_length=100)
