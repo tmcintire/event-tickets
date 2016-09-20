@@ -4,7 +4,8 @@ from django.contrib import messages
 from django.utils import timezone
 from django.views.generic import DetailView, ListView
 from django.contrib.auth.decorators import login_required
-from admission.models import Event
+from django.contrib.auth.models import User
+from admission.models import Event, Employee
 from forms import *
 # Create your views here.
 
@@ -13,10 +14,19 @@ def home(request):
 
     return render(request, 'home.html')
 
+def get_organization(request):
+    current_user = request.user
+    user_id = current_user.id
+    organization = Employee.objects.get(user=user_id).organization
+
+    return organization
+
 
 @login_required()
 def events_view(request):
-    event = Event.objects.filter(date__gte=timezone.now()).order_by(('date'))
+    
+    organization = get_organization(request)
+    event = Event.objects.filter(organization__name=organization, date__gte=timezone.now()).order_by(('date'))
     todays_event = Event.objects.filter(date=timezone.now())
 
     return render(request, 'event_list.html', locals())
@@ -45,6 +55,8 @@ def add_cash(request, event_id):
 
 @login_required()
 def add_event(request):
+    organization = get_organization(request)
+    data = {'organization': organization.id}
     if request.POST:
             form = EventForm(request.POST)
             if form.is_valid():
@@ -52,7 +64,7 @@ def add_event(request):
                 messages.success(request, 'Task added!')
                 return HttpResponseRedirect('/events/')
     else:
-        form = EventForm()
+        form = EventForm(initial=data)
 
     title = "New Event"
 

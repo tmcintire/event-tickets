@@ -1,6 +1,6 @@
 from django import forms
-from admission.models import Event
-
+from admission.models import Event, Organization, Employee
+from django.contrib.auth.models import User
 
 class EventForm(forms.ModelForm):
     class Meta:

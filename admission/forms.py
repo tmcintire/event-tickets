@@ -11,7 +11,7 @@ class AdmissionForm(forms.ModelForm):
 class ExpenseForm(forms.ModelForm):
     class Meta:
         model = Expenses
-        fields = ('name', 'type', 'notes', 'percent', 'cost')
+        fields = ('name', 'type', 'category', 'notes', 'percent', 'cost')
 
 class IncomeForm(forms.ModelForm):
     class Meta:

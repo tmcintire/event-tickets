@@ -2,23 +2,36 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.db.models import Sum, F, Count
+from django.contrib.auth.models import User
+
+
+class EventTypeChoices(models.Model):
+    type = models.CharField(max_length=100)
+
+    def __unicode__(self):
+        return self.type
 
 
 class Organization(models.Model):
     name = models.CharField(max_length=100)
+    event_types = models.ForeignKey(EventTypeChoices)
 
     def __unicode__(self):
         return self.name
 
+
+class Employee(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    organization = models.ForeignKey(Organization)
+
+    def __unicode__(self):
+        return '%s %s' % (self.user, self.organization)
+
+
 class Event(models.Model):
-    EVENT_TYPE_CHOICES = (
-        ('Huntsville Bal Night', 'Huntsville Bal Night'), 
-        ('Huntsville Blues Night', 'Huntsville Blues Night'), 
-        ('Monthly Dance', 'Monthly Dance'),
-    )
     organization = models.ForeignKey(Organization)
     name = models.CharField(max_length=100)
-    type = models.CharField(max_length=100, choices=EVENT_TYPE_CHOICES)
+    type = models.ForeignKey(EventTypeChoices)
     date = models.DateField(blank=True, null=True)
     time = models.TimeField(blank=True, null=True)
     cash = models.DecimalField(decimal_places=2, max_digits=10, blank=True, null=True, verbose_name="Cash in Cashbox")
@@ -54,8 +67,14 @@ class Event(models.Model):
     def expense_cost(self):
         return self.expenses().values("cost")
 
+    def admin_expenses(self):
+        return self.expenses().filter(category="Administrative").aggregate(Sum(F('cost'))).values()[0]
+
+    def main_expenses(self):
+        return self.expenses().filter(category="Main").aggregate(Sum(F('cost'))).values()[0]
+
     def total_expenses(self):
-        return self.expenses().aggregate(Sum(F('cost'))).values()[0]
+        return self.admin_expenses() + self.main_expenses()
 
     def income(self):
         return self.income_set.all()
@@ -64,7 +83,9 @@ class Event(models.Model):
         return self.income().aggregate(Sum(F('amount'))).values()[0]
 
     def net(self):
-        expenses = self.total_expenses()
+        admin_expenses = self.admin_expenses()
+        main_expenses = self.main_expenses()
+        expenses = admin_expenses + main_expenses
         tickets = self.tickets_total()
         if self.total_expenses() is None:
             expenses = 0
@@ -94,8 +115,8 @@ class Event(models.Model):
 
 class AdmissionType(models.Model):
     ADMISSION_CHOICES = (
-        ('General', 'GENERAL'), 
-        ('Student', 'STUDENT'), 
+        ('General', 'GENERAL'),
+        ('Student', 'STUDENT'),
         ('Military', 'MILITARY'),
     )
     event = models.ForeignKey(Event)
@@ -124,14 +145,19 @@ class Tickets(models.Model):
 
 class Expenses(models.Model):
     EXPENSE_TYPE_CHOICES = (
-        ('Band', 'Band'), 
-        ('Venue', 'Venue'), 
+        ('Band', 'Band'),
+        ('Venue', 'Venue'),
         ('DJ', 'DJ'),
         ('Teacher', 'Teacher'),
         ('Other', 'Other'),
     )
+    EXPENSE_CATEGORY = (
+        ('Main', 'Main'),
+        ('Administrative', 'Administrative'),
+    )
     name = models.ForeignKey(Event)
     type = models.CharField(max_length=100, choices=EXPENSE_TYPE_CHOICES, verbose_name="Expense Type")
+    category = models.CharField(max_length=100, choices=EXPENSE_CATEGORY, verbose_name="Expense Category")
     notes = models.CharField(max_length=100)
     cost = models.DecimalField(max_length=10, decimal_places=2, max_digits=10)
     percent = models.IntegerField(blank=True, null=True)
@@ -141,7 +167,7 @@ class Expenses(models.Model):
 
 class Income(models.Model):
     INCOME_TYPE_CHOICES = (
-        ('Donation', 'Donation'), 
+        ('Donation', 'Donation'),
         ('Other', 'Other'),
     )
     event = models.ForeignKey(Event)

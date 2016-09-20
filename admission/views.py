@@ -35,8 +35,9 @@ def admission_types(request, event_id):
 
     # runs the tickets_total() method from the Event model which gets all the tickets sold for the event
     total_revenue = event.tickets_total()
+    admin_expenses = event.admin_expenses()
     admin_fee = event.admin_fee
-    
+
     if total_revenue is None:
         total_revenue = 0
 
@@ -62,23 +63,19 @@ def admission_types(request, event_id):
     if total_revenue is not None:
         for i in expenses:
             if i.percent > 0:
-                i.cost = (total_revenue - admin_fee) * i.percent/100
+                i.cost = (total_revenue - admin_expenses - admin_fee) * i.percent/100
                 i.save()
 
     return render(request, "admissions.html", locals())
 
 @login_required()
 def report(request, year):
-
     events = Event.objects.filter(date__year=year, date__lt=timezone.now()).order_by(('date'))
     header = "Yearly Event Summary"
-
     i = 0
     netSum = 0
     for i in events:
         netSum = netSum + i.net()
-
-
     return render(request, "report.html", locals())
 
 
@@ -93,9 +90,7 @@ def past_events(request):
 
 @login_required()
 def add_tickets(request, event_id):
-
     if request.method == 'POST':
-
         # # Get post data from the form submit, along with the admission type clicked
         type_id = request.POST.get('type_id')
 
@@ -103,7 +98,6 @@ def add_tickets(request, event_id):
         new_ticket.save()
 
         # Grab data from database to be passed back to the template
-
         event = Event.objects.get(pk=event_id)
         count = event.admission_type_count(type_id)
         type_total = event.admission_type_total(type_id)
@@ -113,6 +107,7 @@ def add_tickets(request, event_id):
         total_income = event.total_income()
         total_revenue = event.tickets_total()
         admin_fee = event.admin_fee
+        admin_expenses = event.admin_expenses()
 
         if total_income is None:
             all_income = total_revenue
@@ -121,7 +116,7 @@ def add_tickets(request, event_id):
 
         for i in event.expenses():
             if i.percent != 0 and i.percent != None:
-                i.cost = (total_revenue - admin_fee) * i.percent / 100
+                i.cost = (total_revenue - admin_expenses - admin_fee) * i.percent / 100
                 i.save()
             elif i.percent is None:
                 i.save()
@@ -178,6 +173,7 @@ def delete_one(request, event_id, type_id):
     admin_fee = event.admin_fee
     total_income = event.total_income()
     total_revenue = event.tickets_total()
+    admin_expenses = event.admin_expenses()
 
     if total_income is None:
         all_income = total_revenue
@@ -186,7 +182,7 @@ def delete_one(request, event_id, type_id):
 
     for i in event.expenses():
             if i.percent != 0 and i.percent != None:
-                i.cost = (total_revenue - admin_fee) * i.percent/100
+                i.cost = (total_revenue - admin_expenses - admin_fee) * i.percent/100
                 i.save()
             elif i.percent is None:
                 i.save()
