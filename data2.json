@@ -1,0 +1,3113 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2016-07-08T23:11:58.449Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Huntsville Swing Dance Society",
+    "action_flag": 1,
+    "change_message": "Added."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2016-07-08T23:16:35.035Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Huntsville Bal Night",
+    "action_flag": 2,
+    "change_message": "Changed cash."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2016-07-09T03:32:41.822Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "Huntsville Bal Night DJ",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2016-07-20T00:16:10.686Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Huntsville Bal Night",
+    "action_flag": 2,
+    "change_message": "Changed date."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2016-08-22T19:09:33.832Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "9",
+    "object_repr": "Megan and the Goody Goodies Admin Fee",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2016-08-22T19:11:27.827Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Megan and the Goody Goodies",
+    "action_flag": 2,
+    "change_message": "Changed admin_fee."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2016-08-22T19:24:22.305Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "desk",
+    "action_flag": 1,
+    "change_message": "Added."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2016-08-22T19:30:12.209Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "hsdsboard",
+    "action_flag": 1,
+    "change_message": "Added."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2016-08-22T19:30:38.980Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "hsdsboard",
+    "action_flag": 2,
+    "change_message": "Changed is_staff and is_superuser."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2016-08-22T20:29:00.712Z",
+    "user": 3,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Megan and the Goody Goodies",
+    "action_flag": 2,
+    "change_message": "Changed type and admin_fee."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2016-08-24T13:59:01.537Z",
+    "user": 3,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Moonshine Rhythm Club",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2016-08-24T13:59:01.542Z",
+    "user": 3,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Moonshine Rhythm Club",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2016-08-24T13:59:01.545Z",
+    "user": 3,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Moonshine Rhythm Club",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2016-09-10T00:59:38.067Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Huntsville Blues Night September",
+    "action_flag": 2,
+    "change_message": "Changed cash."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2016-09-10T01:57:03.108Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "hsdsboard",
+    "action_flag": 2,
+    "change_message": "Changed password."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2016-09-12T14:27:58.499Z",
+    "user": 3,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Megan and the Goody Goodies",
+    "action_flag": 2,
+    "change_message": "Changed admin_fee."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.247Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "233",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.258Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "232",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.262Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "231",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.264Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "230",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.268Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "229",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.271Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "228",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.273Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "227",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.277Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "226",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.280Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "225",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.283Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "224",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.287Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "223",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.290Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "222",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.292Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "221",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.297Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "220",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.301Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "219",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.304Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "218",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.307Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "217",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.310Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "216",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.313Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "215",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.316Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "214",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.321Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "213",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.324Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "212",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.327Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "211",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.332Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "210",
+    "object_repr": "Student 7.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.336Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "209",
+    "object_repr": "Student 7.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.339Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "208",
+    "object_repr": "Student 7.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.345Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "207",
+    "object_repr": "Student 7.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.349Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "206",
+    "object_repr": "Student 7.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.352Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "205",
+    "object_repr": "Student 7.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.355Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "204",
+    "object_repr": "Student 7.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.358Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "203",
+    "object_repr": "Student 7.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.363Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "202",
+    "object_repr": "Student 7.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.368Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "201",
+    "object_repr": "Student 7.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.372Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "200",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.375Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "199",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.380Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "198",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.385Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "197",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.388Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "196",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.397Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "195",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.401Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "194",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.405Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "193",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.410Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "192",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.416Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "191",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.421Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "190",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.425Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "189",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.429Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "188",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2016-09-12T14:29:35.432Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "187",
+    "object_repr": "General 10.00 Megan and the Goody Goodies",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2016-09-12T14:30:02.241Z",
+    "user": 3,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Megan and the Goody Goodies",
+    "action_flag": 2,
+    "change_message": "Changed admin_fee."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2016-09-12T19:32:35.579Z",
+    "user": 3,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Megan and the Goody Goodies",
+    "action_flag": 2,
+    "change_message": "Changed cash."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2016-09-13T20:25:57.028Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Megan and her Goody Goodies",
+    "action_flag": 2,
+    "change_message": "Changed name."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2016-09-13T20:26:11.864Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Megan and Her Goody Goodies",
+    "action_flag": 2,
+    "change_message": "Changed name."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2016-09-13T20:50:36.643Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "8",
+    "object_repr": "test",
+    "action_flag": 2,
+    "change_message": "Changed date."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2016-09-13T21:21:07.879Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "7",
+    "object_repr": "Huntsville Bal Night October",
+    "action_flag": 2,
+    "change_message": "Changed date."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2016-09-14T14:05:12.719Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "hsdsboard",
+    "action_flag": 2,
+    "change_message": "Changed is_superuser and last_login."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2016-09-19T23:09:42.810Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "18",
+    "object_repr": "Old City Buskers Teacher",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2016-09-19T23:09:42.818Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "17",
+    "object_repr": "Old City Buskers Teacher",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2016-09-19T23:09:42.821Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "16",
+    "object_repr": "Old City Buskers DJ",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2016-09-19T23:09:58.274Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "19",
+    "object_repr": "Megan and Her Goody Goodies Teacher",
+    "action_flag": 1,
+    "change_message": "Added."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2016-09-19T23:10:08.010Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "20",
+    "object_repr": "Megan and Her Goody Goodies Teacher",
+    "action_flag": 1,
+    "change_message": "Added."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2016-09-20T15:38:57.658Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "8",
+    "object_repr": "Megan and Her Goody Goodies Band",
+    "action_flag": 2,
+    "change_message": "Changed category."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2016-09-20T15:39:03.903Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "7",
+    "object_repr": "Megan and Her Goody Goodies Venue",
+    "action_flag": 2,
+    "change_message": "Changed category."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2016-09-20T16:03:25.908Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "1",
+    "object_repr": "Huntsville Bal Night",
+    "action_flag": 1,
+    "change_message": "Added."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2016-09-20T16:03:33.322Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "2",
+    "object_repr": "Huntsville Blues Night",
+    "action_flag": 1,
+    "change_message": "Added."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2016-09-20T16:03:40.478Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "3",
+    "object_repr": "Monthly Dance",
+    "action_flag": 1,
+    "change_message": "Added."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2016-09-20T16:03:52.876Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "13",
+    "object_repr": "Huntsville Regional Meetup",
+    "action_flag": 2,
+    "change_message": "Changed type."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2016-09-20T16:03:57.454Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "12",
+    "object_repr": "Huntsville Bal Night",
+    "action_flag": 2,
+    "change_message": "Changed type."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2016-09-20T16:04:04.757Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "11",
+    "object_repr": "Moondust Big Band",
+    "action_flag": 2,
+    "change_message": "Changed type."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2016-09-20T16:04:10.410Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "10",
+    "object_repr": "Huntsville Blues Night November",
+    "action_flag": 2,
+    "change_message": "Changed type."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2016-09-20T16:04:16.006Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "7",
+    "object_repr": "Huntsville Bal Night October",
+    "action_flag": 2,
+    "change_message": "Changed type."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2016-09-20T16:04:20.331Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "9",
+    "object_repr": "Old City Buskers",
+    "action_flag": 2,
+    "change_message": "Changed type."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2016-09-20T16:04:28.984Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Huntsville Blues Night September",
+    "action_flag": 2,
+    "change_message": "Changed type."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2016-09-20T16:04:34.502Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Megan and Her Goody Goodies",
+    "action_flag": 2,
+    "change_message": "Changed type."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2016-09-20T16:04:38.091Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Huntsville Bal Night",
+    "action_flag": 2,
+    "change_message": "No fields changed."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2016-09-20T16:07:35.187Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "9",
+    "object_repr": "Old City Buskers",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2016-09-20T17:15:49.060Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "14",
+    "object_repr": "Old City Buskers",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admission.eventtypechoices",
+  "pk": 1,
+  "fields": {
+    "type": "Huntsville Bal Night"
+  }
+},
+{
+  "model": "admission.eventtypechoices",
+  "pk": 2,
+  "fields": {
+    "type": "Huntsville Blues Night"
+  }
+},
+{
+  "model": "admission.eventtypechoices",
+  "pk": 3,
+  "fields": {
+    "type": "Monthly Dance"
+  }
+},
+{
+  "model": "admission.organization",
+  "pk": 1,
+  "fields": {
+    "name": "Huntsville Swing Dance Society",
+    "event_types": 1
+  }
+},
+{
+  "model": "admission.event",
+  "pk": 1,
+  "fields": {
+    "organization": 1,
+    "name": "Huntsville Bal Night",
+    "type": 1,
+    "date": "2016-07-20",
+    "time": "20:00:00",
+    "cash": "286.00",
+    "admin_fee": "0.00"
+  }
+},
+{
+  "model": "admission.event",
+  "pk": 5,
+  "fields": {
+    "organization": 1,
+    "name": "Megan and Her Goody Goodies",
+    "type": 3,
+    "date": "2016-09-17",
+    "time": "19:00:00",
+    "cash": "460.00",
+    "admin_fee": "0.00"
+  }
+},
+{
+  "model": "admission.event",
+  "pk": 6,
+  "fields": {
+    "organization": 1,
+    "name": "Huntsville Blues Night September",
+    "type": 2,
+    "date": "2016-09-09",
+    "time": "20:00:00",
+    "cash": "350.00",
+    "admin_fee": "0.00"
+  }
+},
+{
+  "model": "admission.event",
+  "pk": 7,
+  "fields": {
+    "organization": 1,
+    "name": "Huntsville Bal Night October",
+    "type": 2,
+    "date": "2016-10-07",
+    "time": "20:00:00",
+    "cash": null,
+    "admin_fee": "0.00"
+  }
+},
+{
+  "model": "admission.event",
+  "pk": 10,
+  "fields": {
+    "organization": 1,
+    "name": "Huntsville Blues Night November",
+    "type": 2,
+    "date": "2016-11-04",
+    "time": "20:00:00",
+    "cash": null,
+    "admin_fee": "0.00"
+  }
+},
+{
+  "model": "admission.event",
+  "pk": 11,
+  "fields": {
+    "organization": 1,
+    "name": "Moondust Big Band",
+    "type": 3,
+    "date": "2016-11-19",
+    "time": "20:00:00",
+    "cash": null,
+    "admin_fee": "0.00"
+  }
+},
+{
+  "model": "admission.event",
+  "pk": 12,
+  "fields": {
+    "organization": 1,
+    "name": "Huntsville Bal Night",
+    "type": 1,
+    "date": "2016-12-02",
+    "time": "20:00:00",
+    "cash": null,
+    "admin_fee": "0.00"
+  }
+},
+{
+  "model": "admission.event",
+  "pk": 13,
+  "fields": {
+    "organization": 1,
+    "name": "Huntsville Regional Meetup",
+    "type": 3,
+    "date": "2016-12-10",
+    "time": "19:00:00",
+    "cash": null,
+    "admin_fee": "0.00"
+  }
+},
+{
+  "model": "admission.event",
+  "pk": 15,
+  "fields": {
+    "organization": 1,
+    "name": "Old City Buskers",
+    "type": 3,
+    "date": "2016-10-15",
+    "time": "19:00:00",
+    "cash": "50.00",
+    "admin_fee": "0.00"
+  }
+},
+{
+  "model": "admission.admissiontype",
+  "pk": 1,
+  "fields": {
+    "event": 1,
+    "type": "General",
+    "price": "5.00"
+  }
+},
+{
+  "model": "admission.admissiontype",
+  "pk": 6,
+  "fields": {
+    "event": 5,
+    "type": "General",
+    "price": "10.00"
+  }
+},
+{
+  "model": "admission.admissiontype",
+  "pk": 7,
+  "fields": {
+    "event": 5,
+    "type": "Student",
+    "price": "7.00"
+  }
+},
+{
+  "model": "admission.admissiontype",
+  "pk": 8,
+  "fields": {
+    "event": 5,
+    "type": "Military",
+    "price": "7.00"
+  }
+},
+{
+  "model": "admission.admissiontype",
+  "pk": 9,
+  "fields": {
+    "event": 6,
+    "type": "General",
+    "price": "10.00"
+  }
+},
+{
+  "model": "admission.admissiontype",
+  "pk": 10,
+  "fields": {
+    "event": 7,
+    "type": "General",
+    "price": "10.00"
+  }
+},
+{
+  "model": "admission.admissiontype",
+  "pk": 17,
+  "fields": {
+    "event": 15,
+    "type": "General",
+    "price": "10.00"
+  }
+},
+{
+  "model": "admission.admissiontype",
+  "pk": 18,
+  "fields": {
+    "event": 15,
+    "type": "Student",
+    "price": "7.00"
+  }
+},
+{
+  "model": "admission.admissiontype",
+  "pk": 19,
+  "fields": {
+    "event": 15,
+    "type": "Military",
+    "price": "7.00"
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 16,
+  "fields": {
+    "type": 1,
+    "event": 1
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 17,
+  "fields": {
+    "type": 1,
+    "event": 1
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 18,
+  "fields": {
+    "type": 1,
+    "event": 1
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 19,
+  "fields": {
+    "type": 1,
+    "event": 1
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 20,
+  "fields": {
+    "type": 1,
+    "event": 1
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 21,
+  "fields": {
+    "type": 1,
+    "event": 1
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 22,
+  "fields": {
+    "type": 1,
+    "event": 1
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 23,
+  "fields": {
+    "type": 1,
+    "event": 1
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 24,
+  "fields": {
+    "type": 1,
+    "event": 1
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 25,
+  "fields": {
+    "type": 1,
+    "event": 1
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 26,
+  "fields": {
+    "type": 1,
+    "event": 1
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 27,
+  "fields": {
+    "type": 1,
+    "event": 1
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 28,
+  "fields": {
+    "type": 1,
+    "event": 1
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 29,
+  "fields": {
+    "type": 1,
+    "event": 1
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 30,
+  "fields": {
+    "type": 1,
+    "event": 1
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 31,
+  "fields": {
+    "type": 1,
+    "event": 1
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 32,
+  "fields": {
+    "type": 1,
+    "event": 1
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 33,
+  "fields": {
+    "type": 1,
+    "event": 1
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 34,
+  "fields": {
+    "type": 1,
+    "event": 1
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 35,
+  "fields": {
+    "type": 1,
+    "event": 1
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 36,
+  "fields": {
+    "type": 1,
+    "event": 1
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 37,
+  "fields": {
+    "type": 1,
+    "event": 1
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 38,
+  "fields": {
+    "type": 1,
+    "event": 1
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 137,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 138,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 139,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 140,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 141,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 142,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 143,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 144,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 145,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 146,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 147,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 148,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 149,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 150,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 151,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 152,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 153,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 154,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 155,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 156,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 157,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 158,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 159,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 160,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 161,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 162,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 163,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 164,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 165,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 166,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 167,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 168,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 169,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 170,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 171,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 172,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 173,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 174,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 175,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 176,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 177,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 178,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 179,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 180,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 181,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 182,
+  "fields": {
+    "type": 9,
+    "event": 6
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 280,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 281,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 283,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 284,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 285,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 286,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 287,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 288,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 289,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 290,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 291,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 292,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 293,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 294,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 295,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 296,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 297,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 298,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 299,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 300,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 301,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 302,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 303,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 304,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 305,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 306,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 307,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 308,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 309,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 310,
+  "fields": {
+    "type": 8,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 311,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 312,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 313,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 314,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 315,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 316,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 317,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 318,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 319,
+  "fields": {
+    "type": 8,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 320,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 321,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 322,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 323,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 324,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 325,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 326,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 327,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 328,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 329,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 330,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 331,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 332,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 333,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 334,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 335,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 336,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 337,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 338,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 339,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 340,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 341,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 342,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 343,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 344,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 345,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 346,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 347,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 348,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 349,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 350,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 351,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 352,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 353,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 354,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 355,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 356,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 357,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 358,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 359,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 360,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 361,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 362,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 363,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 364,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 365,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 366,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 367,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 368,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 369,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 370,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 371,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 372,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 373,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 374,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 375,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 376,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 377,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 378,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 379,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 380,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 381,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 382,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 383,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 384,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 385,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 386,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 387,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 388,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 389,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 390,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 391,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 392,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 393,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 394,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 395,
+  "fields": {
+    "type": 7,
+    "event": 5
+  }
+},
+{
+  "model": "admission.tickets",
+  "pk": 396,
+  "fields": {
+    "type": 6,
+    "event": 5
+  }
+},
+{
+  "model": "admission.expenses",
+  "pk": 1,
+  "fields": {
+    "name": 1,
+    "type": "Venue",
+    "category": "Administrative",
+    "notes": "Madison Ballroom",
+    "cost": "75.00",
+    "percent": null,
+    "paid": true
+  }
+},
+{
+  "model": "admission.expenses",
+  "pk": 2,
+  "fields": {
+    "name": 1,
+    "type": "DJ",
+    "category": "Administrative",
+    "notes": "Robert",
+    "cost": "10.00",
+    "percent": null,
+    "paid": true
+  }
+},
+{
+  "model": "admission.expenses",
+  "pk": 3,
+  "fields": {
+    "name": 1,
+    "type": "DJ",
+    "category": "Administrative",
+    "notes": "Andrew",
+    "cost": "20.00",
+    "percent": null,
+    "paid": true
+  }
+},
+{
+  "model": "admission.expenses",
+  "pk": 7,
+  "fields": {
+    "name": 5,
+    "type": "Venue",
+    "category": "Main",
+    "notes": "The Flying Monkey",
+    "cost": "276.90",
+    "percent": 30,
+    "paid": true
+  }
+},
+{
+  "model": "admission.expenses",
+  "pk": 8,
+  "fields": {
+    "name": 5,
+    "type": "Band",
+    "category": "Main",
+    "notes": "Megan and the Goody Goodies",
+    "cost": "646.10",
+    "percent": 70,
+    "paid": true
+  }
+},
+{
+  "model": "admission.expenses",
+  "pk": 9,
+  "fields": {
+    "name": 6,
+    "type": "Band",
+    "category": "Administrative",
+    "notes": "Eli Cook",
+    "cost": "250.00",
+    "percent": null,
+    "paid": true
+  }
+},
+{
+  "model": "admission.expenses",
+  "pk": 10,
+  "fields": {
+    "name": 6,
+    "type": "Venue",
+    "category": "Administrative",
+    "notes": "Madison Ballroom",
+    "cost": "100.00",
+    "percent": null,
+    "paid": true
+  }
+},
+{
+  "model": "admission.expenses",
+  "pk": 11,
+  "fields": {
+    "name": 7,
+    "type": "DJ",
+    "category": "Administrative",
+    "notes": "Cody",
+    "cost": "10.00",
+    "percent": null,
+    "paid": false
+  }
+},
+{
+  "model": "admission.expenses",
+  "pk": 12,
+  "fields": {
+    "name": 7,
+    "type": "Venue",
+    "category": "Administrative",
+    "notes": "Madison Ballroom",
+    "cost": "75.00",
+    "percent": null,
+    "paid": false
+  }
+},
+{
+  "model": "admission.expenses",
+  "pk": 13,
+  "fields": {
+    "name": 5,
+    "type": "DJ",
+    "category": "Administrative",
+    "notes": "Adam",
+    "cost": "10.00",
+    "percent": null,
+    "paid": true
+  }
+},
+{
+  "model": "admission.expenses",
+  "pk": 19,
+  "fields": {
+    "name": 5,
+    "type": "Teacher",
+    "category": "Administrative",
+    "notes": "Amanda",
+    "cost": "10.00",
+    "percent": null,
+    "paid": true
+  }
+},
+{
+  "model": "admission.expenses",
+  "pk": 20,
+  "fields": {
+    "name": 5,
+    "type": "Teacher",
+    "category": "Administrative",
+    "notes": "Cody",
+    "cost": "10.00",
+    "percent": null,
+    "paid": true
+  }
+},
+{
+  "model": "admission.expenses",
+  "pk": 26,
+  "fields": {
+    "name": 15,
+    "type": "Band",
+    "category": "Main",
+    "notes": "Old City Buskers",
+    "cost": "-21.00",
+    "percent": 70,
+    "paid": false
+  }
+},
+{
+  "model": "admission.expenses",
+  "pk": 27,
+  "fields": {
+    "name": 15,
+    "type": "Venue",
+    "category": "Main",
+    "notes": "The Flying Monkey",
+    "cost": "-9.00",
+    "percent": 30,
+    "paid": false
+  }
+},
+{
+  "model": "admission.expenses",
+  "pk": 28,
+  "fields": {
+    "name": 15,
+    "type": "DJ",
+    "category": "Administrative",
+    "notes": "TBD",
+    "cost": "10.00",
+    "percent": null,
+    "paid": false
+  }
+},
+{
+  "model": "admission.expenses",
+  "pk": 29,
+  "fields": {
+    "name": 15,
+    "type": "Teacher",
+    "category": "Administrative",
+    "notes": "TBD",
+    "cost": "10.00",
+    "percent": null,
+    "paid": false
+  }
+},
+{
+  "model": "admission.expenses",
+  "pk": 30,
+  "fields": {
+    "name": 15,
+    "type": "Teacher",
+    "category": "Administrative",
+    "notes": "TBD",
+    "cost": "10.00",
+    "percent": null,
+    "paid": false
+  }
+}
+]
