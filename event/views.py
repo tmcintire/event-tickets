@@ -52,7 +52,7 @@ def add_event(request):
                 messages.success(request, 'Task added!')
                 return HttpResponseRedirect('/events/')
     else:
-        form = EventForm(initial=data)
+        form = EventForm()
 
     title = "New Event"
 
