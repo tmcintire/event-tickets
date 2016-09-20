@@ -176,6 +176,13 @@ def delete_one(request, event_id, type_id):
     admin_expenses = event.admin_expenses()
 
     if total_income is None:
+        total_income = 0
+    if total_revenue is None:
+        total_revenue = 0
+    if admin_expenses is None:
+        admin_expenses = 0
+
+    if total_income is None:
         all_income = total_revenue
     else:
         all_income = total_income + total_revenue
