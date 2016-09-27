@@ -82,7 +82,7 @@ def report(request, year):
 @login_required()
 def past_events(request):
 
-    event = Event.objects.filter(date__lt=timezone.now()).order_by(('date'))
+    event = Event.objects.filter(date__lt=timezone.now()).order_by(('-date'))
     header = "Past Events"
 
     return render(request, "past_events.html", locals())
